@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Chat Bot",
+  "description": "This Extension allows you to interact with Gemini AI",
+  "version": "1.0",
+  "permissions": ["tabs", "scripting"],
+  "action": {
+    "default_title": "Gemini Bot",
+    "default_icon": "images/gemini.svg"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["./cdn/ai-bard-cdn.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "background": {
+    "matches": ["<all_urls>"],
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
