@@ -9,15 +9,13 @@ function clickFunc() {
   userMessage.classList.add("user-message");
   userMessage.textContent = userInput.value;
   chatbox.appendChild(userMessage);
-
-  var version = document.getElementById("default").checked;
-  var botMessage = defaultChat();
+  Chat();
   userInput.value = "";
 
   chatbox.scrollTop = chatbox.scrollHeight;
 }
 
-function defaultChat() {
+function Chat() {
   var userInput = document.getElementById("user-input");
   var chatbox = document.getElementById("chatbox");
   var botMessage = document.createElement("p");
