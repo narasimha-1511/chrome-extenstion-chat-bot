@@ -6,7 +6,8 @@
   "permissions": ["tabs", "scripting"],
   "action": {
     "default_title": "Gemini Bot",
-    "default_icon": "images/gemini.svg"
+    "default_icon": "images/gemini.svg",
+    "default_popup": "popup/popup.html"
   },
   "web_accessible_resources": [
     {
