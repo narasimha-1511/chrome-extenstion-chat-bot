@@ -44,6 +44,13 @@ const safetySettings = [
   },
 ];
 
+const generationConfig = {
+  temperature: 0.7,
+  topK: 40,
+  topP: 0.95,
+  maxOutputTokens: 1024,
+};
+
 // this ia m trying to train model with custom messages for own languagee
 const chat = model.startChat({
   generationConfig,
